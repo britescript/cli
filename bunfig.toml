@@ -1,0 +1,17 @@
+# Bun configuration for Britescript CLI
+
+[build]
+target = "bun"
+format = "esm"
+minify = false
+
+# Britescript build configuration
+# Used by: brite build (replaces scripts/build.ts!)
+[britescript]
+srcDir = "src"      # Source directory containing .bs files
+outDir = "build"    # Output directory for compiled .ts files  
+target = "bun"      # Target runtime (bun, node, browser)
+minify = false      # Minify compiled output
+
+# Enable Britescript plugin to handle .bs files
+preload = ["../brightscript/src/plugin/preload.ts"]

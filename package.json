@@ -1,0 +1,47 @@
+{
+  "name": "@britescript/cli",
+  "version": "0.0.1",
+  "description": "Command-line interface for Britescript",
+  "type": "module",
+  "bin": {
+    "brite": "./build/index.ts"
+  },
+  "scripts": {
+    "build": "bun run build/index.ts build",
+    "build:legacy": "bun scripts/build.ts",
+    "dev": "bun run build:legacy && bun run build/index.ts",
+    "clean": "rm -rf build/",
+    "test": "bun test",
+    "lint": "bunx @biomejs/biome lint .",
+    "format": "bunx @biomejs/biome format --write ."
+  },
+  "dependencies": {
+    "britescript": "file:../brightscript"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "keywords": [
+    "britescript",
+    "cli",
+    "compiler",
+    "typescript"
+  ],
+  "author": "Britescript Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/britescript/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/britescript/cli/issues"
+  },
+  "homepage": "https://britescript.dev"
+}
